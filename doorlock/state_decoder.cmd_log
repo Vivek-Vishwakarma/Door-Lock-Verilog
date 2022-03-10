@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {/home/ise/Door Lock/doorlock/stateDecoder.v} -lang verilog -prj doorlock -o state_decoder.spl -module state_decoder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family aartix7 state_decoder.spl {/home/ise/Door Lock/doorlock/state_decoder.sym} 

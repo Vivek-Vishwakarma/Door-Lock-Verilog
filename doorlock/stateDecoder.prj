@@ -1,0 +1,2 @@
+verilog work "door_lock_FSM.v"
+verilog work "stateDecoder.v"

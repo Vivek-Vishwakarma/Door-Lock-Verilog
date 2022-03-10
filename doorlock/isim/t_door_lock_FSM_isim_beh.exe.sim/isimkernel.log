@@ -1,0 +1,28 @@
+Command line:
+   t_door_lock_FSM_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  39579
+
+Sun Mar  6 14:21:48 2022
+
+
+ Elaboration Time: 0.07 sec
+
+ Current Memory Usage: 198.582 Meg
+
+ Total Signals          : 23
+ Total Nets             : 36
+ Total Signal Drivers   : 14
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 20
+ Total Traceable Variables  : 39
+ Total Scalar Nets and Variables : 208
+
+ Total Simulation Time: 0.2 sec
+
+ Current Memory Usage: 276.181 Meg
+
+Sun Mar  6 14:23:27 2022
+
