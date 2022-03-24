@@ -1,0 +1,726 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: door_lock_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "door_lock_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "door_lock_top"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : door_lock_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/led7_decoder.v" into library work
+Parsing module <led7_decoder>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/stateDecoder.v" into library work
+Parsing module <state_decoder>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/posedge_detector.v" into library work
+Parsing module <posedge_detector>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/pass_decoder.v" into library work
+Parsing module <pass_decoder>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/password_getter.v" into library work
+Parsing module <password_getter_sync>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/LED_blinker.v" into library work
+Parsing module <LED_blinker>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/door_lock_FSM.v" into library work
+Parsing module <door_lock_FSM>.
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/door_lock_top.v" into library work
+Parsing module <door_lock_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <door_lock_top>.
+
+Elaborating module <password_getter_sync>.
+
+Elaborating module <door_lock_FSM>.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 67: Signal <i_password> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 75: Signal <o_correct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 76: Signal <o_incorrect> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 78: Signal <saved_password> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 82: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 82: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 86: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 89: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 99: Signal <saved_password> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 103: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 103: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 107: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 110: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 119: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 120: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 123: Signal <saved_password> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 127: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 127: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 131: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 134: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 141: Signal <i_password> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 147: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 148: Signal <o_correct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 149: Signal <o_incorrect> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 152: Signal <o_trials> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 153: Signal <o_correct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/Door Lock/doorlock/door_lock_FSM.v" Line 154: Signal <o_incorrect> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <pass_decoder>.
+
+Elaborating module <led7_decoder>.
+WARNING:HDLCompiler:189 - "/home/ise/Door Lock/doorlock/door_lock_top.v" Line 83: Size mismatch in connection of port <i_binary>. Formal port size is 4-bit while actual signal size is 2-bit.
+
+Elaborating module <state_decoder>.
+
+Elaborating module <LED_blinker(CLK_IN=50000000,FREQ_OUT=1)>.
+
+Elaborating module <LED_blinker(CLK_IN=50000000,FREQ_OUT=5)>.
+
+Elaborating module <posedge_detector>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <door_lock_top>.
+    Related source file is "/home/ise/Door Lock/doorlock/door_lock_top.v".
+        CLK_IN = 50000000
+    Found 2-bit subtractor for signal <PWR_1_o_trials[1]_sub_1_OUT> created at line 83.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <door_lock_top> synthesized.
+
+Synthesizing Unit <password_getter_sync>.
+    Related source file is "/home/ise/Door Lock/doorlock/password_getter.v".
+    Found 12-bit register for signal <o_password>.
+    Found 12-bit adder for signal <o_password[7]_GND_2_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+Unit <password_getter_sync> synthesized.
+
+Synthesizing Unit <door_lock_FSM>.
+    Related source file is "/home/ise/Door Lock/doorlock/door_lock_FSM.v".
+    Found 1-bit register for signal <o_correct>.
+    Found 1-bit register for signal <o_incorrect>.
+    Found 2-bit register for signal <o_trials>.
+    Found 3-bit register for signal <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | i_clk (rising_edge)                            |
+    | Reset              | i_reset (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <o_trials[1]_GND_3_o_add_21_OUT> created at line 127.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <saved_password<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 12-bit comparator equal for signal <saved_password[11]_i_password[11]_equal_21_o> created at line 123
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred  12 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <door_lock_FSM> synthesized.
+
+Synthesizing Unit <pass_decoder>.
+    Related source file is "/home/ise/Door Lock/doorlock/pass_decoder.v".
+    Summary:
+	no macro.
+Unit <pass_decoder> synthesized.
+
+Synthesizing Unit <led7_decoder>.
+    Related source file is "/home/ise/Door Lock/doorlock/led7_decoder.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <led7_decoder> synthesized.
+
+Synthesizing Unit <state_decoder>.
+    Related source file is "/home/ise/Door Lock/doorlock/stateDecoder.v".
+    Found 8x7-bit Read Only RAM for signal <o_7seg>
+    Summary:
+	inferred   1 RAM(s).
+Unit <state_decoder> synthesized.
+
+Synthesizing Unit <LED_blinker_1>.
+    Related source file is "/home/ise/Door Lock/doorlock/LED_blinker.v".
+        CLK_IN = 50000000
+        FREQ_OUT = 1
+    Found 1-bit register for signal <hz_out>.
+    Found 32-bit register for signal <cnt>.
+    Found 32-bit adder for signal <cnt[31]_GND_19_o_add_2_OUT> created at line 27.
+    Found 32-bit comparator greater for signal <cnt[31]_GND_19_o_LessThan_2_o> created at line 26
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <LED_blinker_1> synthesized.
+
+Synthesizing Unit <LED_blinker_2>.
+    Related source file is "/home/ise/Door Lock/doorlock/LED_blinker.v".
+        CLK_IN = 50000000
+        FREQ_OUT = 5
+    Found 1-bit register for signal <hz_out>.
+    Found 32-bit register for signal <cnt>.
+    Found 32-bit adder for signal <cnt[31]_GND_20_o_add_2_OUT> created at line 27.
+    Found 32-bit comparator greater for signal <cnt[31]_GND_20_o_LessThan_2_o> created at line 26
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <LED_blinker_2> synthesized.
+
+Synthesizing Unit <posedge_detector>.
+    Related source file is "/home/ise/Door Lock/doorlock/posedge_detector.v".
+    Found 1-bit register for signal <sig_delayed>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <posedge_detector> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x7-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 5
+ 12-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 32-bit adder                                          : 2
+# Registers                                            : 12
+ 1-bit register                                        : 8
+ 12-bit register                                       : 1
+ 2-bit register                                        : 1
+ 32-bit register                                       : 2
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Comparators                                          : 3
+ 12-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 5
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '7a100t.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+
+Synthesizing (advanced) Unit <LED_blinker_1>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <LED_blinker_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <LED_blinker_2>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <LED_blinker_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <state_decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_o_7seg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 7-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <i_state>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <o_7seg>        |          |
+    -----------------------------------------------------------------------
+Unit <state_decoder> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x7-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 3
+ 12-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 3
+ 12-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 4
+ 7-bit 2-to-1 multiplexer                              : 5
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM/FSM_0> on signal <current_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 100   | 100
+ 011   | 011
+ 010   | 010
+ 101   | 101
+-------------------
+
+Optimizing unit <password_getter_sync> ...
+
+Optimizing unit <door_lock_top> ...
+
+Optimizing unit <door_lock_FSM> ...
+WARNING:Xst:1710 - FF/Latch <LED_G/cnt_23> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_24> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_25> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_26> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_27> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_28> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_29> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_30> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_G/cnt_31> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_25> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_26> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_27> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_28> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_29> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_30> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_R/cnt_31> (without init value) has a constant value of 0 in block <door_lock_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LED_G/cnt_0> in Unit <door_lock_top> is equivalent to the following FF/Latch, which will be removed : <LED_R/cnt_0> 
+INFO:Xst:2261 - The FF/Latch <LED_G/cnt_1> in Unit <door_lock_top> is equivalent to the following FF/Latch, which will be removed : <LED_R/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <LED_G/cnt_2> in Unit <door_lock_top> is equivalent to the following FF/Latch, which will be removed : <LED_R/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <LED_G/cnt_3> in Unit <door_lock_top> is equivalent to the following FF/Latch, which will be removed : <LED_R/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <LED_G/cnt_4> in Unit <door_lock_top> is equivalent to the following FF/Latch, which will be removed : <LED_R/cnt_4> 
+INFO:Xst:2261 - The FF/Latch <LED_G/cnt_5> in Unit <door_lock_top> is equivalent to the following FF/Latch, which will be removed : <LED_R/cnt_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block door_lock_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : door_lock_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 238
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 63
+#      LUT3                        : 7
+#      LUT4                        : 11
+#      LUT5                        : 36
+#      LUT6                        : 12
+#      MUXCY                       : 62
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 42
+# FlipFlops/Latches                : 79
+#      FD                          : 4
+#      FDR                         : 49
+#      FDRE                        : 14
+#      LDC                         : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 53
+#      IBUF                        : 9
+#      OBUF                        : 44
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              79  out of  126800     0%  
+ Number of Slice LUTs:                  130  out of  63400     0%  
+    Number used as Logic:               130  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    151
+   Number with an unused Flip Flop:      72  out of    151    47%  
+   Number with an unused LUT:            21  out of    151    13%  
+   Number of fully used LUT-FF pairs:    58  out of    151    38%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          54
+ Number of bonded IOBs:                  54  out of    210    25%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------+------------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)        | Load  |
+-------------------------------------------------------------------------------------+------------------------------+-------+
+i_clk                                                                                | BUFGP                        | 67    |
+FSM/current_state[2]_GND_4_o_Mux_42_o(FSM/Mmux_current_state[2]_GND_4_o_Mux_42_o11:O)| NONE(*)(FSM/saved_password_0)| 12    |
+-------------------------------------------------------------------------------------+------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.550ns (Maximum Frequency: 281.688MHz)
+   Minimum input arrival time before clock: 1.730ns
+   Maximum output required time after clock: 1.590ns
+   Maximum combinational path delay: 1.291ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'i_clk'
+  Clock period: 3.550ns (frequency: 281.688MHz)
+  Total number of paths / destination ports: 25999 / 80
+-------------------------------------------------------------------------
+Delay:               3.550ns (Levels of Logic = 34)
+  Source:            LED_G/cnt_0 (FF)
+  Destination:       LED_R/cnt_24 (FF)
+  Source Clock:      i_clk rising
+  Destination Clock: i_clk rising
+
+  Data Path: LED_G/cnt_0 to LED_R/cnt_24
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.361   0.760  LED_G/cnt_0 (LED_G/cnt_0)
+     LUT5:I0->O            1   0.097   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_lut<0> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<0> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<1> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<2> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<3> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<4> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<5> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<5>)
+     MUXCY:CI->O          27   0.023   0.484  LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<6> (LED_R/Mcompar_cnt[31]_GND_19_o_LessThan_2_o_cy<6>)
+     LUT2:I1->O            1   0.097   0.000  LED_R/Mcount_cnt_lut<0> (LED_R/Mcount_cnt_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  LED_R/Mcount_cnt_cy<0> (LED_R/Mcount_cnt_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<1> (LED_R/Mcount_cnt_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<2> (LED_R/Mcount_cnt_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<3> (LED_R/Mcount_cnt_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<4> (LED_R/Mcount_cnt_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<5> (LED_R/Mcount_cnt_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<6> (LED_R/Mcount_cnt_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<7> (LED_R/Mcount_cnt_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<8> (LED_R/Mcount_cnt_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<9> (LED_R/Mcount_cnt_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<10> (LED_R/Mcount_cnt_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<11> (LED_R/Mcount_cnt_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<12> (LED_R/Mcount_cnt_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<13> (LED_R/Mcount_cnt_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<14> (LED_R/Mcount_cnt_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<15> (LED_R/Mcount_cnt_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<16> (LED_R/Mcount_cnt_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<17> (LED_R/Mcount_cnt_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<18> (LED_R/Mcount_cnt_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<19> (LED_R/Mcount_cnt_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<20> (LED_R/Mcount_cnt_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<21> (LED_R/Mcount_cnt_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  LED_R/Mcount_cnt_cy<22> (LED_R/Mcount_cnt_cy<22>)
+     MUXCY:CI->O           0   0.023   0.000  LED_R/Mcount_cnt_cy<23> (LED_R/Mcount_cnt_cy<23>)
+     XORCY:CI->O           1   0.370   0.000  LED_R/Mcount_cnt_xor<24> (LED_R/Mcount_cnt24)
+     FDR:D                     0.008          LED_R/cnt_24
+    ----------------------------------------
+    Total                      3.550ns (2.306ns logic, 1.244ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'i_clk'
+  Total number of paths / destination ports: 96 / 90
+-------------------------------------------------------------------------
+Offset:              1.730ns (Levels of Logic = 4)
+  Source:            i_confirm_FSM (PAD)
+  Destination:       FSM/o_trials_1 (FF)
+  Destination Clock: i_clk rising
+
+  Data Path: i_confirm_FSM to FSM/o_trials_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.456  i_confirm_FSM_IBUF (i_confirm_FSM_IBUF)
+     LUT2:I0->O            8   0.097   0.792  PD1/o_pe1 (i_confirm_FSM_pe)
+     LUT6:I0->O            1   0.097   0.000  FSM/current_state[2]_X_3_o_wide_mux_35_OUT<1>_G (N9)
+     MUXF7:I1->O           1   0.279   0.000  FSM/current_state[2]_X_3_o_wide_mux_35_OUT<1> (FSM/current_state[2]_X_3_o_wide_mux_35_OUT<1>)
+     FDR:D                     0.008          FSM/o_trials_1
+    ----------------------------------------
+    Total                      1.730ns (0.482ns logic, 1.248ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSM/current_state[2]_GND_4_o_Mux_42_o'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              1.461ns (Levels of Logic = 2)
+  Source:            i_hard_reset (PAD)
+  Destination:       FSM/saved_password_0 (LATCH)
+  Destination Clock: FSM/current_state[2]_GND_4_o_Mux_42_o falling
+
+  Data Path: i_hard_reset to FSM/saved_password_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            58   0.001   0.574  i_hard_reset_IBUF (i_hard_reset_IBUF)
+     LUT2:I0->O           19   0.097   0.440  PD3/o_pe1 (i_hard_reset_pe)
+     LDC:CLR                   0.349          FSM/saved_password_11
+    ----------------------------------------
+    Total                      1.461ns (0.447ns logic, 1.014ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clk'
+  Total number of paths / destination ports: 118 / 36
+-------------------------------------------------------------------------
+Offset:              1.590ns (Levels of Logic = 2)
+  Source:            PG/o_password_2 (FF)
+  Destination:       o_pass_7seg_0<6> (PAD)
+  Source Clock:      i_clk rising
+
+  Data Path: PG/o_password_2 to o_pass_7seg_0<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.361   0.793  PG/o_password_2 (PG/o_password_2)
+     LUT5:I0->O            1   0.097   0.339  PD/D1/Mmux_o_7seg21 (o_pass_7seg_0_1_OBUF)
+     OBUF:I->O                 0.000          o_pass_7seg_0_1_OBUF (o_pass_7seg_0<1>)
+    ----------------------------------------
+    Total                      1.590ns (0.458ns logic, 1.132ns route)
+                                       (28.8% logic, 71.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 49 / 28
+-------------------------------------------------------------------------
+Delay:               1.291ns (Levels of Logic = 3)
+  Source:            i_enable_display (PAD)
+  Destination:       o_pass_7seg_0<5> (PAD)
+
+  Data Path: i_enable_display to o_pass_7seg_0<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.001   0.854  i_enable_display_IBUF (i_enable_display_IBUF)
+     LUT5:I0->O            1   0.097   0.339  o_pass_7seg_2<5>1 (o_pass_7seg_2_5_OBUF)
+     OBUF:I->O                 0.000          o_pass_7seg_2_5_OBUF (o_pass_7seg_2<5>)
+    ----------------------------------------
+    Total                      1.291ns (0.098ns logic, 1.193ns route)
+                                       (7.6% logic, 92.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock FSM/current_state[2]_GND_4_o_Mux_42_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+i_clk          |         |         |    1.602|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock i_clk
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+FSM/current_state[2]_GND_4_o_Mux_42_o|         |    2.885|         |         |
+i_clk                                |    3.550|         |         |         |
+-------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 70.00 secs
+Total CPU time to Xst completion: 66.32 secs
+ 
+--> 
+
+
+Total memory usage is 949892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   57 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

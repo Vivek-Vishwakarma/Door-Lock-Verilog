@@ -1,0 +1,11 @@
+[Inputs]
+i_en
+=i_password[11:0]=
+[Outputs]
+=o_7seg_0[6:0]=
+=o_7seg_1[6:0]=
+=o_7seg_2[6:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel pass_decoder
+

@@ -1,0 +1,38 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/Door Lock/doorlock/t_door_lock_top_isim_beh.exe -prj /home/ise/Door Lock/doorlock/t_door_lock_top_beh.prj work.t_door_lock_top work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/led7_decoder.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/stateDecoder.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/posedge_detector.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/pass_decoder.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/password_getter.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/LED_blinker.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/door_lock_FSM.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/door_lock_top.v" into library work
+Analyzing Verilog file "/home/ise/Door Lock/doorlock/t_door_lock_top.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "/home/ise/Door Lock/doorlock/door_lock_top.v" Line 83: Size mismatch in connection of port <i_binary>. Formal port size is 4-bit while actual signal size is 2-bit.
+Completed static elaboration
+Fuse Memory Usage: 95052 KB
+Fuse CPU Usage: 1010 ms
+Compiling module password_getter_sync
+Compiling module door_lock_FSM
+Compiling module led7_decoder
+Compiling module pass_decoder
+Compiling module state_decoder
+Compiling module LED_blinker(CLK_IN=500,FREQ_OUT=...
+Compiling module LED_blinker(CLK_IN=500)
+Compiling module posedge_detector
+Compiling module door_lock_top(CLK_IN=500)
+Compiling module t_door_lock_top
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 11 Verilog Units
+Built simulation executable /home/ise/Door Lock/doorlock/t_door_lock_top_isim_beh.exe
+Fuse Memory Usage: 391072 KB
+Fuse CPU Usage: 1060 ms
+GCC CPU Usage: 800 ms

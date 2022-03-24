@@ -1,0 +1,3 @@
+verilog work "stateDecoder.v"
+verilog work "password_getter.v"
+verilog work "door_lock_top.v"

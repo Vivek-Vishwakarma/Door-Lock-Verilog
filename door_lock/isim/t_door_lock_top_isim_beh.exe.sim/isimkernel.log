@@ -1,0 +1,28 @@
+Command line:
+   t_door_lock_top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54754
+
+Mon Mar 21 14:57:26 2022
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 198.734 Meg
+
+ Total Signals          : 96
+ Total Nets             : 96
+ Total Signal Drivers   : 32
+ Total Blocks           : 18
+ Total Primitive Blocks : 15
+ Total Processes        : 51
+ Total Traceable Variables  : 63
+ Total Scalar Nets and Variables : 610
+
+ Total Simulation Time: 0.23 sec
+
+ Current Memory Usage: 276.333 Meg
+
+Mon Mar 21 15:02:04 2022
+
